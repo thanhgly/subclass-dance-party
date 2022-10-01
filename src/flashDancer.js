@@ -39,3 +39,9 @@ FlashDancer.prototype.step = function(timeBetweenSteps) {
   }
 
 };
+
+FlashDancer.prototype.lineUp = function() {
+  clearTimeout(this.timer);
+  this.$node.animate({top: $("body").height() * 0.45}, 'slow');
+
+};

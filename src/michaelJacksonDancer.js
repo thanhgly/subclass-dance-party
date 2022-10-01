@@ -19,3 +19,8 @@ MichaelJacksonDancer.prototype.step = function(timeBetweenSteps) {
   this.$node.animate({left: this.left}, 'slow');
   this.$node.animate({left: this.left + 100}, 'slow');
 };
+
+MichaelJacksonDancer.prototype.lineUp = function() {
+  this.$node.animate({top: $("body").height() * 0.2}, 'slow');
+
+};
