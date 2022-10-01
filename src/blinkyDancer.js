@@ -1,7 +1,7 @@
 var MakeBlinkyDancer = function(top, left, timeBetweenSteps) {
-
   MakeDancer.call(this, top, left, timeBetweenSteps);
-
+  this.rotated = 1;
+  this.$node.addClass('blinky');
 };
 
 MakeBlinkyDancer.prototype = Object.create(MakeDancer.prototype);
@@ -16,6 +16,8 @@ MakeBlinkyDancer.prototype.step = function(timeBetweenSteps) {
   // See http://api.jquery.com/category/effects/ for this and
   // other effects you can use on a jQuery-wrapped html tag.
   this.$node.toggle();
+
+
 
 };
 
