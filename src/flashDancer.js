@@ -61,6 +61,8 @@ FlashDancer.prototype.step = function(timeBetweenSteps) {
       }
     }
 
+
+
   }
 
 };
