@@ -4,7 +4,12 @@ body, html{
 body{
   margin: 0px;
   background-color:#444;
+  background-image:  url('https://t3.ftcdn.net/jpg/03/22/76/24/360_F_322762412_mGTBuhBN75GKnjVetzkC9EeK6i9KPrz1.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
   font-size: 18px;
+
 }
 body, a:link, a:visited, a:active{
   color: lightblue;
@@ -26,13 +31,14 @@ body, a:link, a:visited, a:active{
   position:absolute;
 }
 .blinky {
-  position: absolute;
-  width: 54px;
-  box-sizing: content-box;
-  border-width: 50px 18px 0;
-  border-style: solid;
-  border-color: white transparent;
-  animation: rotation 1s infinite linear;
+  position:absolute;
+  background: url('src/disco_ball.jpeg');
+  background-size: 100%;
+  background-repeat: no-repeat;
+  border: 0;
+  width:  100px;
+  height: 100px;
+  animation: rotation 4s infinite linear;
 
 }
 
@@ -47,10 +53,23 @@ body, a:link, a:visited, a:active{
   from {transform: rotate(0deg);}
   to {transform: rotate(359deg);}
 }*/
+
 .flash {
-  width: 10px;
-  height: 10px;
-  background: red;
-  border-radius: 50%;
   position:absolute;
+  background: url('src/flash.png');
+  background-size: 100%;
+  background-repeat: no-repeat;
+  border: 0;
+  width:  100px;
+  height: 100px;
+}
+
+.mcj {
+  position:absolute;
+  background: url('src/moonwalk1.png');
+  background-size: 100%;
+  background-repeat: no-repeat;
+  border: 0;
+  width:  100px;
+  height: 100px;
 }

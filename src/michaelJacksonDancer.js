@@ -1,6 +1,8 @@
 var MichaelJacksonDancer = function(top, left, timeBetweenSteps) {
 
   MakeDancer.call(this, top, left, timeBetweenSteps);
+  this.$node.addClass('mcj');
+
   this.left = left;
 
 };

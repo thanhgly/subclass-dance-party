@@ -2,6 +2,7 @@ var MakeBlinkyDancer = function(top, left, timeBetweenSteps) {
   MakeDancer.call(this, top, left, timeBetweenSteps);
   this.rotated = 1;
   this.$node.addClass('blinky');
+  //this.$node = $('<img src="https://i.pinimg.com/736x/6c/ce/60/6cce60652d36184f52bf51de11033440.jpg" class="blinky dancer"></img>');
 };
 
 MakeBlinkyDancer.prototype = Object.create(MakeDancer.prototype);

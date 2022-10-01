@@ -21,21 +21,21 @@ FlashDancer.prototype.step = function(timeBetweenSteps) {
   this.left = $("body").width() * Math.random();
   this.setPosition(this.top, this.left);
 
-  if (this.$node.css('width').substr(0, 2) === '10') {
-    this.$node.css('width', '30px');
-    this.$node.css('height', '30px');
-  } else if (this.$node.css('width').substr(0, 2) === '30') {
-    this.$node.css('width', '50px');
-    this.$node.css('height', '50px');
-  } else if (this.$node.css('width').substr(0, 2) === '50') {
-    this.$node.css('width', '40px');
-    this.$node.css('height', '40px');
-  } else if (this.$node.css('width').substr(0, 2) === '40') {
-    this.$node.css('width', '20px');
-    this.$node.css('height', '20px');
-  } else if (this.$node.css('width').substr(0, 2) === '20') {
-    this.$node.css('width', '10px');
-    this.$node.css('height', '10px');
+  if (this.$node.css('width').substr(0, 3) === '100') {
+    this.$node.css('width', '300px');
+    this.$node.css('height', '300px');
+  } else if (this.$node.css('width').substr(0, 3) === '300') {
+    this.$node.css('width', '500px');
+    this.$node.css('height', '500px');
+  } else if (this.$node.css('width').substr(0, 3) === '500') {
+    this.$node.css('width', '400px');
+    this.$node.css('height', '400px');
+  } else if (this.$node.css('width').substr(0, 3) === '400') {
+    this.$node.css('width', '200px');
+    this.$node.css('height', '200px');
+  } else if (this.$node.css('width').substr(0, 3) === '200') {
+    this.$node.css('width', '100px');
+    this.$node.css('height', '100px');
   }
 
 };
@@ -43,5 +43,4 @@ FlashDancer.prototype.step = function(timeBetweenSteps) {
 FlashDancer.prototype.lineUp = function() {
   clearTimeout(this.timer);
   this.$node.animate({top: $("body").height() * 0.45}, 'slow');
-
 };
