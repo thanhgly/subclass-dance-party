@@ -37,6 +37,9 @@ FlashDancer.prototype.step = function(timeBetweenSteps) {
     this.$node.css('width', '100px');
     this.$node.css('height', '100px');
   }
+  if (!window.dancers) {
+    window.dancers = [];
+  }
   for (var i = 0; i < window.dancers.length; i++) {
     var x;
     var y;

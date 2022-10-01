@@ -18,6 +18,19 @@ describe('blinkyDancer', function() {
     expect(blinkyDancer.$node.toggle.called).to.be.true;
   });
 
+  it('should have a lineUp method', function() {
+    expect(blinkyDancer.lineUp).to.not.equal(undefined);
+  });
+
+  it('should be an instance of superclass MakeDancer', function() {
+    expect(blinkyDancer instanceof MakeDancer).to.equal(true);
+  });
+
+  it('should not be an instance of other subclasses', function() {
+    expect(blinkyDancer instanceof FlashDancer).to.equal(false);
+    expect(blinkyDancer instanceof MichaelJacksonDancer).to.equal(false);
+  });
+
   describe('dance', function() {
     it('should call step at least once per second', function() {
       sinon.spy(blinkyDancer, 'step');

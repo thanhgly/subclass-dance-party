@@ -12,6 +12,19 @@ describe('flashDancer', function() {
     expect(flashDancer.$node).to.be.an.instanceof(jQuery);
   });
 
+  it('should have a lineUp method', function() {
+    expect(flashDancer.lineUp).to.not.equal(undefined);
+  });
+
+  it('should be an instance of superclass MakeDancer', function() {
+    expect(flashDancer instanceof MakeDancer).to.equal(true);
+  });
+
+  it('should not be an instance of other subclasses', function() {
+    expect(flashDancer instanceof MakeBlinkyDancer).to.equal(false);
+    expect(flashDancer instanceof MichaelJacksonDancer).to.equal(false);
+  });
+
   describe('dance', function() {
     it('should call step at least once per second', function() {
       sinon.spy(flashDancer, 'step');
@@ -45,6 +58,19 @@ describe('michaelJacksonDancer', function() {
     sinon.spy(michaelJacksonDancer.$node, 'animate');
     michaelJacksonDancer.step();
     expect(michaelJacksonDancer.$node.animate.called).to.be.true;
+  });
+
+  it('should have a lineUp method', function() {
+    expect(michaelJacksonDancer.lineUp).to.not.equal(undefined);
+  });
+
+  it('should be an instance of superclass MakeDancer', function() {
+    expect(michaelJacksonDancer instanceof MakeDancer).to.equal(true);
+  });
+
+  it('should not be an instance of other subclasses', function() {
+    expect(michaelJacksonDancer instanceof FlashDancer).to.equal(false);
+    expect(michaelJacksonDancer instanceof MakeBlinkyDancer).to.equal(false);
   });
 
   describe('dance', function() {
