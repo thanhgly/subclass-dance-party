@@ -20,6 +20,12 @@ MichaelJacksonDancer.prototype.step = function(timeBetweenSteps) {
   // other effects you can use on a jQuery-wrapped html tag.
   this.$node.animate({left: this.left}, 'slow');
   this.$node.animate({left: this.left + 100}, 'slow');
+
+  // this.$node.on("mouseover", function(){
+  //   clearTimeout(this.timer);
+  //   this.$node.removeClass('mcj');
+  //   this.$node.addClass('mcj');
+  // });
 };
 
 MichaelJacksonDancer.prototype.lineUp = function() {
