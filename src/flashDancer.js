@@ -37,6 +37,31 @@ FlashDancer.prototype.step = function(timeBetweenSteps) {
     this.$node.css('width', '100px');
     this.$node.css('height', '100px');
   }
+  for (var i = 0; i < window.dancers.length; i++) {
+    var x;
+    var y;
+
+    if (window.dancers[i].constructor.name === 'FlashDancer') {
+      x = window.dancers[i].left;
+      y = window.dancers[i].top;
+    }
+    if (x !== this.left && y !== this.top) {
+      //√[(x₂ - x₁)² + (y₂ - y₁)²],
+      var x2 = Math.pow((this.left - x), 2);
+      var y2 = Math.pow((this.top - y), 2);
+
+      var distance = Math.sqrt(x2 + y2);
+      console.log(distance);
+      if (distance < 200) {
+        this.$node.removeClass('flash');
+        this.$node.addClass('flash2');
+      } else {
+        this.$node.removeClass('flash2');
+        this.$node.addClass('flash');
+      }
+    }
+
+  }
 
 };
 

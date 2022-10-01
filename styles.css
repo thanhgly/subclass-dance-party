@@ -64,14 +64,25 @@ body, a:link, a:visited, a:active{
   height: 100px;
 }
 
+.flash2 {
+  position:absolute;
+  background: url('src/flash2.jpeg');
+  background-size: 100%;
+  background-repeat: no-repeat;
+  border: 0;
+  width:  100px;
+  height: 100px;
+}
+
+
 .mcj {
   position:absolute;
   background: url('src/moonwalk1.png');
   background-size: 100%;
   background-repeat: no-repeat;
   border: 0;
-  width:  100px;
-  height: 100px;
+  width:  200px;
+  height: 500px;
 }
 .mcj:hover {
   position:absolute;
@@ -79,6 +90,6 @@ body, a:link, a:visited, a:active{
   background-size: 100%;
   background-repeat: no-repeat;
   border: 0;
-  width:  100px;
-  height: 100px;
+  width:  200px;
+  height: 500px;
 }
